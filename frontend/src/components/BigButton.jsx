@@ -9,7 +9,9 @@ import Collapse from "@mui/material/Collapse";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-const API_BASE_URL = "https://fateflip.onrender.com/api/v1";
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000"
+).replace(/\/$/, "");
 
 function BigButton() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -21,7 +23,7 @@ function BigButton() {
 
   useEffect(() => {
     const fetchFate = async () => {
-      const response = await axios.get(`${API_BASE_URL}/fate/random`);
+      const response = await axios.get(`${API_BASE_URL}/api/v1/fate/random`);
       const fate = response.data.data.fate;
 
       localStorage.setItem("fate", JSON.stringify(fate));
