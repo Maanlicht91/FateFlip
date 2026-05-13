@@ -5,7 +5,6 @@ import cors from "cors";
 const app = express();
 const allowedOrigins = ["http://localhost:5173", process.env.FRONTEND_URL];
 
-app.use(express.json());
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -17,7 +16,7 @@ app.use(
     },
   }),
 );
-
+app.use(express.json());
 app.use("/api/v1", fateRoutes);
 
 app.get("/", (req, res) => {
