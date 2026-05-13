@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.logo-title {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #e5ecf5;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-shadow:
+    0 0 10px rgba(34, 211, 238, 0.8),
+    0 0 24px rgba(168, 85, 247, 0.8),
+    0 0 48px rgba(236, 72, 153, 0.45);
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.68);
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  perspective: 1600px;
+  margin-top: 1rem;
+}
+
+.big-button-flip {
+  width: min(80vw, 38rem);
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.big-button-flip:disabled {
+  cursor: wait;
+}
+
+.big-button-flip-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.big-button-flip.is-flipped .big-button-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.big-button-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.error-container {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.fate-card-error {
+  margin: 0;
+  color: #fffcfc;
+  font-size: 0.95rem;
+  text-shadow: 0 0 12px rgba(113, 17, 74, 0.35);
+}
+
+.button-circle,
+.fate-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.button-circle {
+  border-radius: 100%;
+  cursor: pointer;
+  filter: drop-shadow(0 20px 25px rgba(72, 39, 255, 0.55));
+}
+
+.big-button-flip:hover:not(:disabled) .button-circle {
+  transform: scale(1.02);
+  filter: drop-shadow(0 20px 25px rgba(147, 48, 200, 0.65));
+}
+
+.big-button-back {
+  transform: rotateY(180deg);
+}
+
+.fate-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fate-card-image-BLOOM {
+  filter: drop-shadow(0 20px 25px rgba(245, 18, 18, 0.35));
+}
+
+.fate-card-image-GLOOM {
+  filter: drop-shadow(0 20px 25px rgba(18, 34, 255, 0.35));
+}
+.fate-card-image-LOOM {
+  filter: drop-shadow(0 20px 25px rgba(13, 255, 194, 0.35));
+}
+@media (max-width: 1200px) {
+  .big-button-flip {
+    width: min(80vw, 34rem);
+  }
+  .logo-subtitle {
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media (max-width: 640px) {
+  .big-button-flip {
+    width: min(88vw, 24rem);
+  }
+  .fate-card-error {
+    font-size: 0.7rem;
+  }
+  .footer {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-height: 760px) {
+  .big-button-flip {
+    width: min(88vw, 28rem);
+  }
+}
+@media (max-height: 600px) {
+  .big-button-flip {
+    width: min(100vw, 20rem);
+  }
+}
