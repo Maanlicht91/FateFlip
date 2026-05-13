@@ -9,7 +9,7 @@ import Collapse from "@mui/material/Collapse";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-const API_BASE_URL = "http://127.0.0.1:5000/api/v1";
+const API_BASE_URL = "https://fateflip.onrender.com/api/v1";
 
 function BigButton() {
   const [isFlipped, setIsFlipped] = useState(false);
