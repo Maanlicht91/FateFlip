@@ -11,9 +11,11 @@ export const getFate = async (req, res) => {
       },
     });
   } catch (error) {
+    console.error("Random fate error:", error);
+
     return res.status(500).json({
       status: "error",
-      message: error.message,
+      message: error.message || "Something went wrong",
     });
   }
 };

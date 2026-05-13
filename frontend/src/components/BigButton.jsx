@@ -50,8 +50,9 @@ function BigButton() {
           setCardType(type);
           setCardMessage(message);
         }
+        // eslint-disable-next-line no-unused-vars
       } catch (e) {
-        setError("Card image could not be loaded." + e);
+        setError("Card image could not be loaded.");
       }
     };
 
