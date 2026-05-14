@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.postimg.cc/d0BrwzQ4/fateflip.jpg" alt=title" />
+</p>
+
 ## About app
 
 FateFlip is a playful full-stack fortune generator that gives users a random fate from three categories: Gloom, Bloom, and Loom. The app uses a PostgreSQL database with Prisma to store fate messages and card data, while the Express API handles random fate selection and serves the frontend with clean structured data.
@@ -17,6 +21,7 @@ FateFlip is a playful full-stack fortune generator that gives users a random fat
 
 - Random fate generation
 - Three fate categories: Gloom, Bloom, Loom
+- You can only flip it once a day
 - PostgreSQL database integration
 - Prisma ORM for database queries
 - REST API built with Express
