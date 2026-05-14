@@ -4,14 +4,14 @@ FateFlip is a playful full-stack fortune generator that gives users a random fat
 
 ## Tech stack
 
-Frontend: React, Vite, CSS
-Backend: Node.js, Express.js
-Database: PostgreSQL
-ORM: Prisma
-Database Hosting: Neon
-Backend Hosting: Render
-Frontend Hosting: Vercel
-Tools: Git, GitHub, Postman
+- Frontend: React, Vite, CSS
+- Backend: Node.js, Express.js
+- Database: PostgreSQL
+- ORM: Prisma
+- Database Hosting: Neon
+- Backend Hosting: Render
+- Frontend Hosting: Vercel
+- Tools: Git, GitHub, Postman
 
 ## Features section
 
